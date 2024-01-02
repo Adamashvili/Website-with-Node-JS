@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+      
+
+        .container {
+          
+            height: 100vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: start;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* margin: auto; */
+            
+
+
+        }
+
+        .left-side {
+
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        
+        }
+
+        .back {
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            background-color: darkred;
+            color: white;
+            text-decoration: none;
+            padding: 3px 25px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 7px 2px red;
+        }
+
+        .left-side img {
+            width: 70%;
+           
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px 2px black;
+        }
+
+        .right-side {
+            width: 600px;
+
+
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            text-align: center;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .descs {
+            display: flex;
+            justify-content: space-between;
+            padding-inline: 50px;
+
+        }
+
+        .descs p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .describtions {
+            width: 90%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <a class="back" href="./products"> Back </a>
+            <img src="{{%IMG%}}"
+                alt="">
+            <div class="describtions">
+                <h2>Product Describtion</h2>
+                <p>{{%DESCRIBTION%}}</p>
+            </div>
+        </div>
+        <div class="right-side">
+           
+            <div class="header">
+                <h1>{{%PHONENAME%}}</h1>
+                <h3>${{%PRICE%}}</h3>
+            </div>
+            <div class="details">
+                <h4>Product Details</h4>
+                <div class="descs">
+                    <p>Model-name: </p>
+                    <span>{{%MODELNAME%}}</span>
+                </div>
+                <div class="descs">
+                    <p>Model Number: </p>
+                    <span>{{%SERIALNUMBER%}}</span>
+                </div>
+                <div class="descs">
+                    <p>Size:</p>
+                    <span>{{%SIZE%}}</span>
+                </div>
+                <div class="descs">
+                    <p>Camera:</p>
+                    <span>{{%CAMERA%}}</span>
+                </div>
+                <div class="descs">
+                    <p>ROM</p>
+                    <span >{{%ROM%}} GB</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
+
+<!-- let productHtmlArray = products.map((prod) => {
+     let output = productListHtml.replace('{{%PRICE%}}', prod.price);
+     output = output.replace('{{%IMG%}}', prod.productImage);
+     output = output.replace('{{%COLOR%}}', prod.color);
+     output = output.replace('{{%PHONENAME%}}', prod.name);
+     output = output.replace('{{%MODELNAME%}}', prod.modeName);
+     output = output.replace('{{%SERIALNUMBER%}}', prod.modelNumber);
+     output = output.replace('{{%SIZE%}}', prod.size);
+     output = output.replace('{{%CAMERA%}}', prod.camera);
+     output = output.replace('{{%DESCRIBTION%}}', prod.Description);
+     output = output.replace('{{%ID%}}', prod.id);
+
+     return output;
+}) -->
